@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>我的个人作品集 | Frontend Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: system-ui, -apple-system, sans-serif;
+    }
+    :root {
+      --bg: #0f172a;
+      --text: #e2e8f0;
+      --muted: #94a3b8;
+      --primary: #38bdf8;
+      --card: #1e293b;
+    }
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 2rem max(1rem, calc(50vw - 600px));
+    }
+    header {
+      margin-bottom: 4rem;
+    }
+    .name {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: white;
+    }
+    .title {
+      color: var(--primary);
+      font-size:1.2rem;
+      margin:0.5rem 0;
+    }
+    .desc {
+      color: var(--muted);
+      max-width:600px;
+    }
+    nav {
+      margin:1rem 0;
+    }
+    nav a {
+      color: var(--primary);
+      text-decoration:none;
+      margin-right:1.5rem;
+    }
+    section {
+      margin-bottom: 4rem;
+    }
+    h2 {
+      font-size:1.5rem;
+      margin-bottom:1.2rem;
+      border-left:4px solid var(--primary);
+      padding-left:0.8rem;
+    }
+    .skills {
+      display:flex;
+      flex-wrap:wrap;
+      gap:0.6rem;
+    }
+    .skill-tag {
+      background:var(--card);
+      padding:0.4rem 0.8rem;
+      border-radius:999px;
+      font-size:0.9rem;
+      color:var(--primary);
+    }
+    .project-list {
+      display:grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap:1.2rem;
+    }
+    .project-card {
+      background:var(--card);
+      padding:1.4rem;
+      border-radius:12px;
+      transition:0.2s;
+    }
+    .project-card:hover {
+      transform: translateY(-4px);
+    }
+    .project-card h3 {
+      margin-bottom:0.5rem;
+    }
+    .project-card p {
+      color:var(--muted);
+      font-size:0.95rem;
+    }
+    .project-card a {
+      display:inline-block;
+      margin-top:0.8rem;
+      color:var(--primary);
+      text-decoration:none;
+    }
+    footer {
+      color:var(--muted);
+      font-size:0.9rem;
+      margin-top:6rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 class="name">你的名字</h1>
+    <div class="title">前端开发工程师</div>
+    <p class="desc">热爱前端，擅长 HTML/CSS/JS，熟悉Vue/React，专注于写出简洁、高性能、体验良好的页面。</p>
+    <nav>
+      <a href="#about">关于我</a>
+      <a href="#skills">技能</a>
+      <a href="#projects">项目</a>
+      <a href="#contact">联系</a>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>关于我</h2>
+    <p>这里写你的个人介绍。比如学习经历、工作经历、技术偏好。<br>
+    例：熟悉原生JS，了解前端工程化，有PC端、移动端页面开发经验，喜欢研究页面性能优化。</p>
+  </section>
+
+  <section id="skills">
+    <h2>技术栈</h2>
+    <div class="skills">
+      <span class="skill-tag">HTML5</span>
+      <span class="skill-tag">CSS3</span>
+      <span class="skill-tag">JavaScript</span>
+      <span class="skill-tag">TypeScript</span>
+      <span class="skill-tag">Vue</span>
+      <span class="skill-tag">React</span>
+      <span class="skill-tag">Tailwind CSS</span>
+      <span class="skill-tag">Git</span>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>项目作品</h2>
+    <div class="project-list">
+      <div class="project-card">
+        <h3>项目1：电商静态页面</h3>
+        <p>使用HTML+CSS+JS实现响应式电商首页，适配移动端，实现轮播、下拉菜单。</p>
+        <a href="https://github.com/xxx">Github源码</a>
+      </div>
+      <div class="project-card">
+        <h3>项目2：Todo待办应用</h3>
+        <p>原生JS实现待办清单，本地存储，增删改查，支持暗黑模式。</p>
+        <a href="#">在线预览</a>
+      </div>
+      <div class="project-card">
+        <h3>项目3：个人博客页面</h3>
+        <p>响应式博客静态页面，适配手机、平板、桌面端。</p>
+        <a href="#">在线预览</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>联系方式</h2>
+    <p>邮箱：xxx@shturl.</p>
+    <p>GitHub：https://github.com/xxx</p>
+    <p>掘金/CSDN：你的博客地址</p>
+  </section>
+
+  <footer>
+    © 2026 你的名字 | 静态作品集
+  </footer>
+</body>
+</html>
